@@ -1,0 +1,48 @@
+.burger {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .burger {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 16px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  .line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: all 0.1s linear;
+  }
+  .one {
+    top: 0;
+  }
+  .two {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .three {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .four {
+    bottom: 0;
+  }
+  .open .one,
+  .open .four {
+    opacity: 0;
+  }
+  .open .two {
+    transform: rotate(45deg);
+  }
+  .open .three {
+    transform: rotate(-45deg);
+  }
+}
