@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getBurgers } from "../actions/requests";
+import { getBurgers } from "../api/requests";
 import styles from "./page.module.css"
 
+
 export default async function Burgers() {
-  const burgers = await getBurgers();
+  const burgers = await getBurgers()
 
   return (
     <div>

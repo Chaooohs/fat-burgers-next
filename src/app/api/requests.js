@@ -13,11 +13,12 @@ export async function getData() {
 
 // On the client, via a Route Handler
 export async function getBurgers() {
-  const res = await fetch('http://localhost:5000/items');
+  const res = await fetch('https://raw.githubusercontent.com/Chaooohs/JSON-resume/master/fat-burgers.json');
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
   
-  return await res.json();
+  const data = await res.json()
+  return data.items;
 }

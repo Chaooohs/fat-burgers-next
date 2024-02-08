@@ -1,4 +1,4 @@
-import { getData } from "../actions/requests";
+import { getData } from "../api/requests";
 
 export default async function Reviews() {
   const reviews = await getData();
