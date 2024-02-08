@@ -1,7 +1,7 @@
 
 // On the server, with fetch
 export async function getData() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/comments");
+  const res = await fetch("https://jsonplaceholder.typicode.com/comments", { cache: 'no-store' });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
